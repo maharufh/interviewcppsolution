@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+char getGrade(int num) {
+    if (num >= 90) {
+        return 'A';
+    } else if (num >= 80) {
+        return 'B';
+    } else if (num >= 70) {
+        return 'C';
+    } else if (num >= 60) {
+        return 'D';
+    } else if (num >= 50) {
+        return 'E';
+    } else {
+        return 'F';
+    }
+}
+
+int main() {
+    int num;
+    cin >> num;
+
+    char grade = getGrade(num);
+    cout << grade << endl;
+
+    return 0;
+}
