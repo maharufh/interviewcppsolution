@@ -1,0 +1,12 @@
+#include<iostream>
+using namespace std;
+
+// Function declaration
+void compute(int& A, int& B, int& C);
+
+// Function definition
+void compute(int& A, int& B, int& C) {
+    A = A * A * A; // Cube of A
+    B = B * B * B; // Cube of B
+    C = C * C * C; // Cube of C
+}
