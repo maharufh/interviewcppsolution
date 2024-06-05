@@ -1,0 +1,21 @@
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+
+int main()  {
+    string A, B;
+    cin>>A>>B;
+    // YOUR CODE GOES HERE
+      cout << A.size() << " " << B.size() << endl;
+
+    // Concatenate strings A and B
+    string concatenated = A + B;
+    cout << concatenated << endl;
+
+    // Swap first characters of A and B
+    swap(A[0], B[0]);
+    cout << A << " " << B << endl;
+    return 0;
+}
