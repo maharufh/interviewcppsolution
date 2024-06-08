@@ -1,0 +1,12 @@
+#include <iostream>
+#include <cmath> // for std::abs
+
+using namespace std;
+
+void solve(int *A, int *B) {
+    int originalA = *A;
+    int originalB = *B;
+
+    *A = originalA + originalB; // Store the sum in A
+    *B = abs(originalA - originalB); // Store the absolute difference in B
+}
