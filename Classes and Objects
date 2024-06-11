@@ -1,0 +1,24 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+class Student {
+    string name;
+    int age;
+    int rollno;
+
+public:
+    // Method to set member variables
+    void set_variable(string n, int a, int r) {
+        name = n;
+        age = a;
+        rollno = r;
+    }
+
+    // Method to print member variables
+    void print_variable() {
+        cout << name << endl;
+        cout << age << endl;
+        cout << rollno << endl;
+    }
+};
