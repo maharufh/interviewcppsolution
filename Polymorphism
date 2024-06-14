@@ -1,0 +1,8 @@
+int compute(int a, int b) {
+    return abs(a - b);
+}
+
+// Function to compute the square of an integer
+int compute(int a) {
+    return a * a;
+}
