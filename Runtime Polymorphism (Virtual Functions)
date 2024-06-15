@@ -1,0 +1,55 @@
+#include <iostream>
+using namespace std;
+
+// Base class
+class Animal {
+protected:
+    int age;
+public:
+    // Constructor
+    Animal(int a) : age(a) {}
+
+    // Virtual function for Eat
+    virtual void Eat() {
+        cout << "Animal eats food" << endl;
+    }
+
+    // Virtual function for get_Age
+    virtual int get_Age() {
+        return age;
+    }
+};
+
+// Derived class Dog
+class Dog : public Animal {
+public:
+    // Constructor
+    Dog(int a) : Animal(a) {}
+
+    // Override Eat function
+    void Eat() override {
+        cout << "Dog eats meat" << endl;
+    }
+
+    // Override get_Age function
+    int get_Age() override {
+        return age;
+    }
+};
+
+// Derived class Cat
+class Cat : public Animal {
+public:
+    // Constructor
+    Cat(int a) : Animal(a) {}
+
+    // Override Eat function
+    void Eat() override {
+        cout << "Cat eats meat" << endl;
+    }
+
+    // Override get_Age function
+    int get_Age() override {
+        return age;
+    }
+};
