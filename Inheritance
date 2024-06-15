@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+class Rectangle: public Shape{
+    public:
+    Rectangle(): Shape(){}
+    int get_Perimeter(){
+        return (width+length)*2;
+    }
+};
