@@ -1,0 +1,33 @@
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+int main()  {
+    // Read the number of integers
+    int N;
+    cin >> N;
+
+    // Read the integers into a vector
+    vector<int> arr(N);
+    for (int i = 0; i < N; ++i) {
+        cin >> arr[i];
+    }
+
+    // Read the index to be deleted
+    int X;
+    cin >> X;
+
+    // Remove the element at index X
+    arr.erase(arr.begin() + X);
+
+    // Sort the remaining elements
+    sort(arr.begin(), arr.end());
+
+    // Print each integer in the sorted order
+    for (int i = 0; i < arr.size(); ++i) {
+        cout << arr[i] << endl;
+    }
+
+    return 0;
+}
