@@ -1,0 +1,15 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+// Custom comparator to sort pairs based on the sum of their elements
+bool comparePairs(const pair<int, int> &a, const pair<int, int> &b) {
+    return (a.first + a.second) < (b.first + b.second);
+}
+
+void sortArray(vector<pair<int, int>> &A) {
+    // Sort the array using the custom comparator
+    sort(A.begin(), A.end(), comparePairs);
+}
