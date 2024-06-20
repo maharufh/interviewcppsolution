@@ -1,0 +1,31 @@
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+int main() {
+    int N;
+    cin >> N;
+    vector<int> arr(N);
+    for (int i = 0; i < N; ++i) {
+        cin >> arr[i];
+    }
+    
+    int Q;
+    cin >> Q;
+    while (Q--) {
+        int X;
+        cin >> X;
+        
+        auto it = lower_bound(arr.begin(), arr.end(), X);
+        if (it != arr.end() && *it == X) {
+            // If X is present, output the index of the first occurrence
+            cout << distance(arr.begin(), it) << endl;
+        } else {
+            // If X is not present, output the index where it can be inserted
+            cout << distance(arr.begin(), it) << endl;
+        }
+    }
+    
+    return 0;
+}
