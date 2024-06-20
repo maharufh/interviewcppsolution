@@ -1,0 +1,33 @@
+#include <iostream>
+#include <vector>
+#include <tuple>
+#include <algorithm> // Include this header to use max_element and min_element
+
+using namespace std;
+
+pair<int, int> findMaxMin(vector<int> &A) {
+    // First value of pair will be Maximum of array A and second will be Minimum of array A
+    int max_val = *max_element(A.begin(), A.end());
+    int min_val = *min_element(A.begin(), A.end());
+    return make_pair(max_val, min_val);
+}
+
+tuple<int, int, int> compute(vector<int> &A) {
+    // First value of tuple will be sum of array A
+    // Second value of tuple will be sum of even values in array A 
+    // Third value of tuple will be sum of odd values in array A
+    int sum = 0;
+    int sum_even = 0;
+    int sum_odd = 0;
+    
+    for (int num : A) {
+        sum += num;
+        if (num % 2 == 0) {
+            sum_even += num;
+        } else {
+            sum_odd += num;
+        }
+    }
+    
+    return make_tuple(sum, sum_even, sum_odd);
+}
