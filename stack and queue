@@ -1,0 +1,27 @@
+vector<int> solve(vector<int> &A, int B) {
+    vector<int> result;
+    deque<int> dq;
+    
+    for (int i = 0; i < A.size(); i++) {
+        // Remove elements out of this window
+        if (!dq.empty() && dq.front() == i - B) {
+            dq.pop_front();
+        }
+        
+        // Remove elements smaller than the current element
+        while (!dq.empty() && A[dq.back()] <= A[i]) {
+            dq.pop_back();
+        }
+        
+        // Add current element at the back of the deque
+        dq.push_back(i);
+        
+        // The element at the front of the deque is the largest element of
+        // the window, starting from the index i - B + 1 to i
+        if (i >= B - 1) {
+            result.push_back(A[dq.front()]);
+        }
+    }
+    
+    return result;
+}
