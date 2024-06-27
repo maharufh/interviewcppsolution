@@ -1,0 +1,21 @@
+ int main()  {
+    int a, b;
+    cin>>a>>b;
+   
+    // call function division(a, b)
+    // print the result in try else exception in catch
+    // Your code goes here
+       try {
+       
+        if (b == 0) {
+            throw runtime_error("Division by zero condition!");
+        }
+
+        int result = division(a,b);
+        cout << result << endl;
+    }
+    catch (const exception& ex) {
+        cout << ex.what() << endl;
+    }
+    return 0;
+}
